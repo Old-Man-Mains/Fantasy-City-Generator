@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fantasy City Generator</title>
+</head>
+
+<body>
+
+    <h1>Fantasy City Generator</h1>
+
+    <p>Build a settlement and generate a fantasy city map.</p>
+
+    <h2>Settlement</h2>
+
+    <label for="population">Population</label>
+    <input
+        type="number"
+        id="population"
+        value="1000"
+        min="1"
+    >
+<br><br>
+
+<label for="density">Density</label>
+<select id="density">
+    <option value="sparse">Sparse</option>
+    <option value="normal" selected>Normal</option>
+    <option value="dense">Dense</option>
+</select>
+
+<br><br>
+
+<label for="districts">Number of Districts</label>
+<input
+    type="number"
+    id="districts"
+    value="3"
+    min="1"
+    max="20"
+>
+<br><br>
+
+<h3>District Types</h3>
+
+<div id="district-type-list">
+</div>
+
+<button type="button" id="add-district-type">
+    Add District Type
+</button>
+
+<p id="district-type-warning"></p>
+
+<br><br>
+
+<label for="sprawl">Sprawl</label>
+<select id="sprawl">
+    <option value="none">None</option>
+    <option value="small">Small</option>
+    <option value="medium">Medium</option>
+    <option value="large">Large</option>
+</select>
+
+<br><br>
+
+<h2>Fortifications</h2>
+
+<label for="fortification">Fortification Type</label>
+<select id="fortification">
+    <option value="none">None</option>
+    <option value="palisade">Wooden Palisade</option>
+    <option value="rampart">Earth Rampart</option>
+    <option value="stone-wall">Stone Wall</option>
+</select>
+
+<br><br>
+
+<label for="gates">Number of Gates</label>
+<input
+    type="number"
+    id="gates"
+    value="2"
+    min="0"
+    max="12"
+>
+
+<br><br>
+
+<label>
+    <input type="checkbox" id="towers">
+    Defensive Towers
+</label>
+
+<br><br>
+
+<label>
+    <input type="checkbox" id="moat">
+    Moat
+</label>
+
+<br><br>
+
+<h2>Geography</h2>
+
+<label>
+    <input type="checkbox" id="river">
+    River
+</label>
+
+<br>
+
+<label>
+    <input type="checkbox" id="lake">
+    Lake
+</label>
+
+<br>
+
+<label>
+    <input type="checkbox" id="coast">
+    Coast
+</label>
+
+<br>
+
+<label>
+    <input type="checkbox" id="hills">
+    Hills
+</label>
+
+<br>
+
+<label>
+    <input type="checkbox" id="forest">
+    Forest
+</label>
+
+<br>
+
+<label>
+    <input type="checkbox" id="cliffs">
+    Cliffs
+</label>
+
+<br>
+
+<label>
+    <input type="checkbox" id="island">
+    Island
+</label>
+
+<br><br>
+
+<h2>Businesses</h2>
+
+<label for="inns">Inns</label>
+<input
+    type="number"
+    id="inns"
+    value="1"
+    min="0"
+>
+
+<br><br>
+
+<label for="taverns">Taverns</label>
+<input
+    type="number"
+    id="taverns"
+    value="1"
+    min="0"
+>
+
+<br><br>
+
+<h3>Shops</h3>
+
+<div id="shop-list">
+</div>
+
+<button type="button" id="add-shop">Add Shop</button>
+
+<br><br>
+
+<h2>Public Spaces</h2>
+
+<label for="parks">Parks</label>
+<input
+    type="number"
+    id="parks"
+    value="0"
+    min="0"
+>
+
+<br><br>
+
+<label for="squares">Squares</label>
+<input
+    type="number"
+    id="squares"
+    value="0"
+    min="0"
+>
+<br><br>
+
+<hr>
+
+<h2>Generate Settlement</h2>
+
+<button type="button" id="generate-settlement">
+    Generate Settlement
+</button>
+
+<div id="settlement-output">
+</div>
+
+
+
+<script src="generator.js"></script>
+
+</body>
+</html>
